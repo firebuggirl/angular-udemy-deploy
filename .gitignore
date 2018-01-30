@@ -2,10 +2,9 @@
 /node_modules
 /.idea
 /typings
-/public/js/
+
 npm-debug.log
 variables.env
 variables.env.now
 .DS_Store
 *.log
-

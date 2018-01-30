@@ -486,6 +486,13 @@ https://www.udemy.com/angular-2-and-nodejs-the-practical-guide/learn/v4/t/lectur
 
       - refactor later
 
+      - add this to `package.json`:
+
+          `   "engines": {
+                 "node": ">= 7.6.0"
+              }`
+
+      - remove `/public/js/` from `.gitignore`
       - ` npm run build:prod `
 
     * Update on Heroku:
