@@ -466,3 +466,14 @@ https://www.udemy.com/angular-2-and-nodejs-the-practical-guide/learn/v4/t/lectur
   - create new app in dashboard & name it
 
   - ` heroku login `
+
+  -  Create repo on Github
+      ` git init `
+      ` git add . `
+      ` git commit -m "first commit" `
+      ` git remote add origin ....... `
+      ` git push -u origin master `
+
+  - initialize existing repo on Heroku from project   directory:
+
+    - ` heroku git:remote -a angular-udemy-deployment `
