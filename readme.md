@@ -442,22 +442,6 @@ https://www.udemy.com/angular-2-and-nodejs-the-practical-guide/learn/v4/t/lectur
 
 ## Deploy
 
-   * Set up MongoLab to host MongoDB:
-
-    https://mlab.com/home?newLogin=1
-
-    - create new DB + create DB name
-
-    - choose provider
-
-    - choose single node + sandbox
-
-    - click on db, then on `users`
-
-         - create new DB User w/ name and password
-
-
-    - copy DB URI string and enter it in `app.js` + set up `.env` variables to hide credentials
 
 * Deploy to Heroku:
 
@@ -495,7 +479,9 @@ https://www.udemy.com/angular-2-and-nodejs-the-practical-guide/learn/v4/t/lectur
      - ` heroku config:add NODE_ENV=production `//auto populates value in config vars via Heroku UI
 
 
-    * Update URLs in `assets/app/messages/message.service.ts`:
+   * Add Node.js buildpack via Heroku site
+
+   * Update URLs in `assets/app/messages/message.service.ts`:
 
       - change from `http://localhost:3000/message` to `app domain` located in settings UI on Heroku
 
@@ -527,6 +513,7 @@ https://www.udemy.com/angular-2-and-nodejs-the-practical-guide/learn/v4/t/lectur
 
       - run ` heroku logs ` to view logs
 
+      - ` heroku open `
 ## For security checks run:
 
     - ` nsp check `
