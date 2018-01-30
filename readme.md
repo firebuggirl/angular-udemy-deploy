@@ -477,3 +477,28 @@ https://www.udemy.com/angular-2-and-nodejs-the-practical-guide/learn/v4/t/lectur
   - initialize existing repo on Heroku from project   directory:
 
     - ` heroku git:remote -a angular-udemy-deployment `
+
+    * Update URLs in `assets/app/messages/message.service.ts`:
+
+      - change from `http://localhost:3000/message` to `app domain` located in settings UI on Heroku
+
+      - repeat same in `assets/app/auth/authservice.ts`, with the exception of the final path being `user` instead of `message`
+
+      - refactor later
+
+      - ` npm run build:prod `
+
+    * Update on Heroku:
+
+      - NOTE: Environment variables must be set up via Heroku UI via `Settings/Config Vars`
+
+      - Install `mLab` as an addon
+
+      - `  git add . `
+      - ` git commit -am "make it better" `
+      - ` git push heroku master `
+
+
+## For security checks run:
+
+    - ` nsp check `
