@@ -476,7 +476,24 @@ https://www.udemy.com/angular-2-and-nodejs-the-practical-guide/learn/v4/t/lectur
 
   - initialize existing repo on Heroku from project   directory:
 
-    - ` heroku git:remote -a angular-udemy-deployment `
+    - ` heroku create angular-udemy-deploy `//or whatever else you choose to name your app
+
+    - `  heroku git:remote -a angular-udemy-deploy `
+
+    - ` heroku addons:create mongolab ` //create MongoDB/mLab addon
+
+  * open new DB just created on mLab
+
+    - ` heroku addons:open mongolab `//automatically   creates config variable via Heroku UI
+
+    - ` heroku config:get MONGODB_URI `
+
+        - set in `variables.config` file for local development
+
+   * Set Environment to production
+
+     - ` heroku config:add NODE_ENV=production `//auto populates value in config vars via Heroku UI
+
 
     * Update URLs in `assets/app/messages/message.service.ts`:
 
@@ -490,7 +507,7 @@ https://www.udemy.com/angular-2-and-nodejs-the-practical-guide/learn/v4/t/lectur
 
           `   "engines": {
                  "node": ">= 7.6.0"
-              }`
+              } `
 
       - remove `/public/js/` from `.gitignore`
 
