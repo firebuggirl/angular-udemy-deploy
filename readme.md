@@ -443,32 +443,30 @@ https://www.udemy.com/angular-2-and-nodejs-the-practical-guide/learn/v4/t/lectur
 ## Deploy
 
 
-* Deploy to Heroku:
-
-  - add `variables.env` to `.gitigore` BEFORE deploying
-
-  - create new app in dashboard & name it
-
-  - ` heroku login `
-
-  -  Create repo on Github
+ *  Create repo on Github
       ` git init `
       ` git add . `
       ` git commit -m "first commit" `
       ` git remote add origin ....... `
       ` git push -u origin master `
 
-  - initialize existing repo on Heroku from project   directory:
+* Deploy to Heroku:
+
+    - add `variables.env` to `.gitigore` BEFORE deploying
 
     - ` heroku create angular-udemy-deploy `//or whatever else you choose to name your app
 
+    - initialize existing (Github) repo on Heroku from project directory:
+
     - `  heroku git:remote -a angular-udemy-deploy `
 
-    - ` heroku addons:create mongolab ` //create MongoDB/mLab addon
+    -  Create MongoDB/mLab addon
+
+    - ` heroku addons:create mongolab `
 
   * open new DB just created on mLab
 
-    - ` heroku addons:open mongolab `//automatically   creates config variable via Heroku UI
+    - ` heroku addons:open mongolab `//automatically creates config variable via Heroku UI
 
     - ` heroku config:get MONGODB_URI `
 
@@ -480,6 +478,8 @@ https://www.udemy.com/angular-2-and-nodejs-the-practical-guide/learn/v4/t/lectur
 
 
    * Add Node.js buildpack via Heroku site
+
+   * Create Procfile to tell Heroku where app starts
 
    * Update URLs in `assets/app/messages/message.service.ts`:
 
@@ -501,19 +501,30 @@ https://www.udemy.com/angular-2-and-nodejs-the-practical-guide/learn/v4/t/lectur
 
     * Update on Heroku:
 
-      - NOTE: Environment variables must be set up via Heroku UI via `Settings/Config Vars`
-
-      - Install `mLab` as an addon
+      - NOTE: Any additional environment variables must be set up via Heroku UI via `Settings/Config Vars`
 
       - `  git add . `
-      - ` git commit -am "make it better" `
+      - ` git commit -m "make it better" `
       - ` git push heroku master `
 
-      - ` heroku logs --tail `// live stream of the build errors
+      - Get live stream of the build errors:
+      - ` heroku logs --tail `
 
-      - run ` heroku logs ` to view logs
+      - To to view logs:
+      - run ` heroku logs `
 
       - ` heroku open `
 ## For security checks run:
 
     - ` nsp check `
+
+## Check headers:
+
+    https://securityheaders.io/
+
+
+## SNYK test for vulnerabilities:
+
+    - ` snyk test `
+
+    - Run `snyk wizard` to explore remediation options
