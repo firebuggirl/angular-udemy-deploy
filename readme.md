@@ -404,9 +404,9 @@ https://www.udemy.com/angular-2-and-nodejs-the-practical-guide/learn/v4/t/lectur
 
       - create `auth.module.ts`
 
-      - add component that are only used for auth:
+      - add components that are only used for auth
 
-        ` `
+
 
   * need to change routes for `auth` to enable lazy Loading
 
@@ -493,6 +493,7 @@ https://www.udemy.com/angular-2-and-nodejs-the-practical-guide/learn/v4/t/lectur
               }`
 
       - remove `/public/js/` from `.gitignore`
+
       - ` npm run build:prod `
 
     * Update on Heroku:
@@ -505,6 +506,9 @@ https://www.udemy.com/angular-2-and-nodejs-the-practical-guide/learn/v4/t/lectur
       - ` git commit -am "make it better" `
       - ` git push heroku master `
 
+      - ` heroku logs --tail `// live stream of the build errors
+
+      - run ` heroku logs ` to view logs
 
 ## For security checks run:
 
