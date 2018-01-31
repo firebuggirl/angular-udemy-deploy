@@ -564,3 +564,39 @@ https://www.udemy.com/angular-2-and-nodejs-the-practical-guide/learn/v4/t/lectur
   * Do the same in `assets/app/auth/auth.service.ts`
 
   * Re-name `app.js` file to `application.js` , but first create new Git branch for AWS Elastic Beanstalk
+
+    - 4:21 https://www.udemy.com/angular-2-and-nodejs-the-practical-guide/learn/v4/t/lecture/5272088?start=240
+
+    - ` git checkout -b aws-elastic-beanstalk `
+
+    - Change working branch :
+
+    - ` git checkout [name_of_your_new_branch] `
+
+    - Push the branch on github :
+
+    - ` git push origin [name_of_your_new_branch] `
+
+
+  * In `bin/www`:
+
+    - Switch `var app = require('../app');` to `...application`
+
+  *  Build for production:
+
+    ` npm run build:prod `
+
+  * Create a zip file for deployment in finder:
+
+    - Copy/highlight/right click/compress/+ name `deploy.zip`:
+
+        - `application.js`
+        - `bin` directory
+        - `models` directory
+        - `package.json`
+        - `public` directory
+        - `routes` directory
+        - `view` directory
+
+  * Go back to
+   https://us-west-2.console.aws.amazon.com/elasticbeanstalk/home?region=us-west-2#/environment/dashboard...... and upload file via `Upload and Deploy`
