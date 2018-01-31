@@ -10,6 +10,7 @@
 
   - `aws-elastic-beanstalk` ..for deployment to AWS Electric  Beanstalk
 
+# Steps
 
 * Angular app is tied into Node app via `views/index.hbs`
 
