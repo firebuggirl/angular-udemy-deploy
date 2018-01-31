@@ -1,6 +1,6 @@
 # This is a test MEAN Stack application with Authorization
 
-  * Most steps here originate from this tutorial, with the exception of Heroku deployment and AWS Electric Beanstalk deployment step, which I have heavily modified:
+  * Most steps here originate from this tutorial, with the exception of Heroku deployment and AWS Electric Beanstalk deployment step, which I have modified to fit my own workflow:
 
   - https://www.udemy.com/angular-2-and-nodejs-the-practical-guide/learn/v4/content
 
