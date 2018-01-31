@@ -557,6 +557,8 @@ https://www.udemy.com/angular-2-and-nodejs-the-practical-guide/learn/v4/t/lectur
 
   - Copy Environment URL from Review page
 
+  http://angularudemydeploy2-env.us-west-2.elasticbeanstalk.com
+
   - Click `Launch`
 
   * Go to `assets/app/messages/message.service.ts` and replace all URL paths with app URL
@@ -600,3 +602,10 @@ https://www.udemy.com/angular-2-and-nodejs-the-practical-guide/learn/v4/t/lectur
 
   * Go back to
    https://us-west-2.console.aws.amazon.com/elasticbeanstalk/home?region=us-west-2#/environment/dashboard...... and upload file via `Upload and Deploy`
+
+  * NOTE/ERROR upon deployment: status `Degraded`
+  * Solution:
+
+    - https://forums.aws.amazon.com/thread.jspa?threadID=218649
+    - ...last comment in thread:
+      - Create `.ebextensions/nodecommand.config` and set `NodeCommand` to `npm start`
