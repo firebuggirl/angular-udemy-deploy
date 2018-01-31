@@ -4,6 +4,7 @@ var bcrypt = require('bcryptjs');
 var jwt = require('jsonwebtoken');
 
 var User = require('../models/user');
+require('dotenv').config({ path: '../variables.env' });
 
 
 router.post('/', function (req, res, next) {
@@ -47,7 +48,7 @@ router.post('/signin', function(req, res, next) {
         error: { message: 'Invalid Login Credentials'}//otherwise people can phish for names/email addresses and passwords
       });
     }
-     var token = jwt.sign({ user: user }, 'secret', { expiresIn: 7200 });//`7200`= 2 hrs
+     var token = jwt.sign({ user: user }, process.env.SECRET, { expiresIn: 7200 });//`7200`= 2 hrs
      res.status(200).json({
         message: 'Successfully Logged In!',
         token: token,

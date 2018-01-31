@@ -4,6 +4,7 @@ var jwt = require('jsonwebtoken');
 var mongoose = require('mongoose');
 var User = require('../models/user');
 var Message = require('../models/message');
+require('dotenv').config({ path: '../variables.env' });
 
 router.get('/', function (req, res, next) {
     Message.find()
@@ -23,7 +24,7 @@ router.get('/', function (req, res, next) {
 });
 
 router.use('/', function (req, res, next) {
-    jwt.verify(req.query.token, 'secret', function (err, decoded) {
+    jwt.verify(req.query.token, process.env.SECRET, function (err, decoded) {
         if (err) {
             return res.status(401).json({
                 title: 'Not Authenticated',
