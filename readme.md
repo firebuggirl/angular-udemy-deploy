@@ -470,7 +470,7 @@ https://www.udemy.com/angular-2-and-nodejs-the-practical-guide/learn/v4/t/lectur
 
     - ` heroku config:get MONGODB_URI `
 
-        - set in `variables.config` file for local development
+        - set in `variables.env` file for local development
 
    * Set Environment to production
 
