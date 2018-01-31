@@ -599,6 +599,7 @@ https://www.udemy.com/angular-2-and-nodejs-the-practical-guide/learn/v4/t/lectur
         - `public` directory
         - `routes` directory
         - `view` directory
+        - `.ebextensions` directory
 
   * Go back to
    https://us-west-2.console.aws.amazon.com/elasticbeanstalk/home?region=us-west-2#/environment/dashboard...... and upload file via `Upload and Deploy`
@@ -609,3 +610,17 @@ https://www.udemy.com/angular-2-and-nodejs-the-practical-guide/learn/v4/t/lectur
     - https://forums.aws.amazon.com/thread.jspa?threadID=218649
     - ...last comment in thread:
       - Create `.ebextensions/nodecommand.config` and set `NodeCommand` to `npm start`
+
+* Set Environment Variables via AWS/Electric Beanstalk UI:
+
+  - https://stackoverflow.com/questions/36851887/recommended-way-to-install-mongodb-on-elastic-beanstalk
+
+   - Open the `Elastic Beanstalk console`
+
+   - Navigate to the `management console` for your environment
+
+   - Choose `Configuration`
+
+   - In the `Software Configuration` section, choose `Edit`
+
+   - Under `Environment Properties`, create your `name / values`
