@@ -1,3 +1,16 @@
+## This is a test MEAN Stack application with Authorization
+
+  * Most steps here originate from this tutorial, with the exception of Heroku deployment and AWS Electric Beanstalk deployment step, which I have heavily modified:
+
+  - https://www.udemy.com/angular-2-and-nodejs-the-practical-guide/learn/v4/content
+
+# There are 2 branches in this application:
+
+  - `master` ..for deployment to Heroku
+
+  - `aws-elastic-beanstalk` ..for deployment to AWS Electric  Beanstalk
+
+
 * Angular app is tied into Node app via `views/index.hbs`
 
 * Open 4 terminal windows and run:
