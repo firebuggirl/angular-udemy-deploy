@@ -1,3 +1,11 @@
+## This is a test MEAN Stack application with Authorization
+
+# There are 2 branches in this application:
+
+  - `master` ..for deployment to Heroku
+
+  - `aws-elastic-beanstalk` ..for deployment to AWS Electric  Beanstalk
+
 * Angular app is tied into Node app via `views/index.hbs`
 
 * Open 4 terminal windows and run:
@@ -623,4 +631,4 @@ https://www.udemy.com/angular-2-and-nodejs-the-practical-guide/learn/v4/t/lectur
 
    - In the `Software Configuration` section, choose `Edit`
 
-   - Under `Environment Properties`, create your `name / values`
+   - Under `Software Configuration`, create your `name / values`
