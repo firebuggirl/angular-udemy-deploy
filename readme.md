@@ -528,3 +528,39 @@ https://www.udemy.com/angular-2-and-nodejs-the-practical-guide/learn/v4/t/lectur
     - ` snyk test `
 
     - Run `snyk wizard` to explore remediation options
+
+## Deploy to AWS Elastic Beanstalk
+
+  - Go to https://aws.amazon.com/ ...login
+
+  - Use free tier
+
+  - go to `services/Elastic Beanstalk`
+
+  - go to `Create New Application` + create app name + description
+
+  - `next` + `Create web server`
+
+  - Choose `node.js` + `next`
+
+  - Leave `Sample application` checked + `next`
+
+  - ...`next`
+
+  - ...`next`
+
+  - Select `t2.micro` + `next`...part of free tier
+
+  -  ...`next`
+
+  -  ...`next`
+
+  - Copy Environment URL from Review page
+
+  - Click `Launch`
+
+  * Go to `assets/app/messages/message.service.ts` and replace all URL paths with app URL
+
+  * Do the same in `assets/app/auth/auth.service.ts`
+
+  * Re-name `app.js` file to `application.js` , but first create new Git branch for AWS Elastic Beanstalk

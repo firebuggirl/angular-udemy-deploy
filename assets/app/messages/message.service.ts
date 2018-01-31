@@ -20,7 +20,8 @@ export class MessageService {
         const token = localStorage.getItem('token')
             ? '?token=' + localStorage.getItem('token')
             : '';
-        return this.http.post('https://angular-udemy-deploy.herokuapp.com/message' + token, body, {headers: headers})
+        //return this.http.post('https://angular-udemy-deploy.herokuapp.com/message' + token, body, {headers: headers})
+        return this.http.post('http://angularudemydeploy-env.us-west-2.elasticbeanstalk.com/message' + token, body, {headers: headers})
         //return this.http.post('http://localhost:3000/message' + token, body, {headers: headers})
             .map((response: Response) => {
                 const result = response.json();
@@ -39,7 +40,8 @@ export class MessageService {
     }
 
     getMessages() {
-        return this.http.get('https://angular-udemy-deploy.herokuapp.com/message')
+        //return this.http.get('https://angular-udemy-deploy.herokuapp.com/message')
+        return this.http.get('http://angularudemydeploy-env.us-west-2.elasticbeanstalk.com/message')
         //return this.http.get('http://localhost:3000/message')
 
             .map((response: Response) => {
@@ -72,7 +74,8 @@ export class MessageService {
         const token = localStorage.getItem('token')
             ? '?token=' + localStorage.getItem('token')
             : '';
-        return this.http.patch('https://angular-udemy-deploy.herokuapp.com/message' + message.messageId + token, body, {headers: headers})
+        //return this.http.patch('https://angular-udemy-deploy.herokuapp.com/message' + message.messageId + token, body, {headers: headers})
+        return this.http.patch('http://angularudemydeploy-env.us-west-2.elasticbeanstalk.com/message' + message.messageId + token, body, {headers: headers})
         //return this.http.patch('https://localhost:3000/message' + message.messageId + token, body, {headers: headers})
             .map((response: Response) => response.json())
             .catch((error: Response) => {
@@ -86,7 +89,8 @@ export class MessageService {
         const token = localStorage.getItem('token')
             ? '?token=' + localStorage.getItem('token')
             : '';
-        return this.http.delete('https://angular-udemy-deploy.herokuapp.com/message' + message.messageId + token)
+        //return this.http.delete('https://angular-udemy-deploy.herokuapp.com/message' + message.messageId + token)
+        return this.http.delete('http://angularudemydeploy-env.us-west-2.elasticbeanstalk.com/message' + message.messageId + token)
         //return this.http.delete('http://localhost:3000/message' + message.messageId + token)
             .map((response: Response) => response.json())
             .catch((error: Response) => {

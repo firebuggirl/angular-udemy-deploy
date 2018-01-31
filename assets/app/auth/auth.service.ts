@@ -14,7 +14,8 @@ export class AuthService {
         const body = JSON.stringify(user);
         const headers = new Headers({'Content-Type': 'application/json'});
         //return this.http.post('http://localhost:3000/user', body, {headers: headers})
-        return this.http.post('https://angular-udemy-deploy.herokuapp.com/user', body, {headers: headers})
+        //return this.http.post('https://angular-udemy-deploy.herokuapp.com/user', body, {headers: headers})
+        return this.http.post('http://angularudemydeploy-env.us-west-2.elasticbeanstalk.com/user', body, {headers: headers})
             .map((response: Response) => response.json())
             .catch((error: Response) => {
                 this.errorService.handleError(error.json());
@@ -26,7 +27,8 @@ export class AuthService {
         const body = JSON.stringify(user);
         const headers = new Headers({'Content-Type': 'application/json'});
         //return this.http.post('http://localhost:3000/user/signin', body, {headers: headers})
-        return this.http.post('https://angular-udemy-deploy.herokuapp.com/user/signin', body, {headers: headers})
+        //return this.http.post('https://angular-udemy-deploy.herokuapp.com/user/signin', body, {headers: headers})
+        return this.http.post('http://angularudemydeploy-env.us-west-2.elasticbeanstalk.com/user/signin', body, {headers: headers})
             .map((response: Response) => response.json())
             .catch((error: Response) => {
                 this.errorService.handleError(error.json());
