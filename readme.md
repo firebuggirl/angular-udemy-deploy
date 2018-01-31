@@ -1,4 +1,4 @@
-## This is a test MEAN Stack application with Authorization
+# This is a test MEAN Stack application with Authorization
 
   * Most steps here originate from this tutorial, with the exception of Heroku deployment and AWS Electric Beanstalk deployment step, which I have heavily modified:
 
